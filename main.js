@@ -18,8 +18,8 @@ addButtonNode.addEventListener("click", () => {
 
   taskValue.textContent = taskInputNode.value;
   deleteBtn.innerHTML = "x";
-  divNode.appendChild(taskValue);
   divNode.appendChild(tickBtn);
+  divNode.appendChild(taskValue);
   divNode.appendChild(deleteBtn);
 
   deleteBtn.addEventListener("click", (e) => {

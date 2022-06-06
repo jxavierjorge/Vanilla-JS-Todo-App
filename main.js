@@ -29,17 +29,16 @@ addButtonNode.addEventListener("click", () => {
     }
   });
 
-  tickBtn.addEventListener("click", (e)=>{
+  tickBtn.addEventListener("click", (e) => {
     const item = e.target;
-    if (item.checked){
-        console.log("riscado");
-    }
-    else{
-        console.log("Não riscado");
+    if (item.checked) {
+      let parent = item.parentElement;
+      parent.querySelectorAll("li")[0].classList.add("done");
+    } else {
+      let parent = item.parentElement;
+      parent.querySelectorAll("li")[0].classList.remove("done");
     }
   });
 
   tasklistNode.appendChild(divNode);
-
 });
-
